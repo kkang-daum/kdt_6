@@ -12,7 +12,7 @@ fun main() {
     //동일 패키지의 코틀린 파일에 선언된.. 멤버는 import 없이..
     println(oneData)
     oneFun()
-    
+
     println(twoData)
     twoFun()
 
