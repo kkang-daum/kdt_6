@@ -41,7 +41,7 @@ fun main() {
     //함수를 이용해서..
     val a2: Double = a1.toDouble()
     val a3: Int = a2.toInt()
-    
+
     //String <-> Int
     val b1: String = a1.toString()
     val b2: Int = b1.toInt()
