@@ -4,7 +4,7 @@ package com.example.kotlin_test.ch2.section2
 val data1: Int = 10
 var data2: Int = 10
 
-class MyClass {
+class MyClass1 {
     //class member 변수, default 초기화 지원하지 않는다. 선언과 동시에 초기값 지정되어야 한다.
     val data3: Int = 10
     var data4: Int = 10
