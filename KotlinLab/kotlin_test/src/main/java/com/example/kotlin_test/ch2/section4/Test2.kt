@@ -31,4 +31,8 @@ fun main() {
     val list3 = listOf<String>("hello", "world", "hello")
     println(list3)//[hello, world, hello]
 
+    val list4: MutableList<String> = mutableListOf<String>("hello", "world", "hello")
+    list4.add("hello")
+    println(list4)//[hello, world, hello, hello]
+
 }

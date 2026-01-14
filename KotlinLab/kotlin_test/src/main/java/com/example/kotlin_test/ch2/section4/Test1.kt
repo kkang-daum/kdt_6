@@ -23,5 +23,5 @@ fun main() {
 
     //기초 데이터를 담기 위한 XXXArray 클래스가 별도로 선언되어 있다.. 자바 호환성을 위해서..
     IntArray(3, { 0})
-    IntArray(3, { i -> i * 10 })
+    IntArray(3, { a -> a * 10 })
 }
