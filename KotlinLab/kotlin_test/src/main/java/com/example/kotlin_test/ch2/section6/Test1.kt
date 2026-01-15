@@ -75,4 +75,7 @@ fun main() {
     myList.printList()
     myList - "busan"
     myList.printList()
+
+    fun a(){}
+    val b: Unit = a()
 }
