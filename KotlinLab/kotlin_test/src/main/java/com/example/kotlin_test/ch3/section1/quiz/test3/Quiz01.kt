@@ -1,3 +1,5 @@
+package bbb
+
 class User(
     private var name:String?=null,
     private var age:Int=0
