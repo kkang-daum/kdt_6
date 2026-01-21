@@ -13,7 +13,7 @@ abstract class Animal(protected val name: String){
     }
 }
 
-class Dog(name: String, val speed: Int): Animal(name), Movable {
+class Dog(name: String, val speed1: Int): Animal(name), Movable {
     override fun makeSound() {
         println("$name says....")
     }
@@ -22,5 +22,5 @@ class Dog(name: String, val speed: Int): Animal(name), Movable {
         println("move....")
     }
 
-    override fun getSpeed(): Int = speed
+    override fun getSpeed(): Int = speed1
 }
