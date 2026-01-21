@@ -28,3 +28,7 @@ interface MyInterface1 {
 
         }
 }
+
+class Sub2: MyInterface1{
+    override var prop1: Int = 10
+}
