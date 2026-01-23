@@ -46,4 +46,6 @@ fun main() {
     println(DatabaseManager.getStatus())
     //Disconnected from database
     //Status: Disconnected, Total connections: 2
+
+
 }
