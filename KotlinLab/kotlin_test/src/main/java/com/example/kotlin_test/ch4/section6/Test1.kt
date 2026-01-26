@@ -1,4 +1,4 @@
-package com.example.kotlin_test.ch4.section6
+package com.example.kotlin_test.ch4.section6.aa
 
 class Test {
     val data: Int = 10
@@ -40,6 +40,20 @@ val Test.extensionData //ok.....
 var Test.extensionData2: Int
     get() = 30
     set(value){ }
+
+open class Super {
+    fun superFun(){
+
+    }
+}
+class Sub: Super(){
+    fun a(){
+        super.superFun()//ok
+    }
+}
+fun Sub.b(){
+//    super.superFun()//error..
+}
 
 fun main() {
     val obj = Test()
