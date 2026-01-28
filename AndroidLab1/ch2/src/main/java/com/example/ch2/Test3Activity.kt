@@ -8,30 +8,45 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.ch2.databinding.ActivityTest3Binding
 
 class Test3Activity : AppCompatActivity() {
 
-    lateinit var visibleBtn: Button
-    lateinit var targetView: TextView
-    lateinit var invisibleBtn: Button
+//    lateinit var visibleBtn: Button
+//    lateinit var targetView: TextView
+//    lateinit var invisibleBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        //inflate + 출력 ==>view 객체 생성 완료..
-        setContentView(R.layout.activity_test3)
-        //필요한 뷰 객체 획득..
-        visibleBtn = findViewById(R.id.visibleBtn)
-        targetView = findViewById(R.id.targetView)
-        invisibleBtn = findViewById(R.id.invisibleBtn)
-        //획득한 뷰 객체에 이벤트 등록..
-        visibleBtn.setOnClickListener {
-            targetView.visibility = View.VISIBLE
+//        //inflate + 출력 ==>view 객체 생성 완료..
+//        setContentView(R.layout.activity_test3)
+//        //필요한 뷰 객체 획득..
+//        visibleBtn = findViewById(R.id.visibleBtn)
+//        targetView = findViewById(R.id.targetView)
+//        invisibleBtn = findViewById(R.id.invisibleBtn)
+//        //획득한 뷰 객체에 이벤트 등록..
+//        visibleBtn.setOnClickListener {
+//            targetView.visibility = View.VISIBLE
+//        }
+//        invisibleBtn.setOnClickListener {
+//            targetView.visibility = View.INVISIBLE
+//        }
+
+        //ViewBinding 기법을 사용하면.. 자동으로 만들어지는 XXXBinding 클래스에 inflate 명령은 내려야 한다.
+        val binding: ActivityTest3Binding = ActivityTest3Binding.inflate(layoutInflater)
+        //화면 출력.. binding 너네가 가지고 있는 객체중 root 객체를 출력해..
+        setContentView(binding.root)
+
+        binding.visibleBtn.setOnClickListener {
+            binding.targetView.visibility = View.VISIBLE
         }
-        invisibleBtn.setOnClickListener {
-            targetView.visibility = View.INVISIBLE
+        binding.invisibleBtn.setOnClickListener {
+            binding.targetView.visibility = View.INVISIBLE
         }
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

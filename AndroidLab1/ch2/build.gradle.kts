@@ -35,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    //ViewBinding 기법 사용 선언..
+    //layout xml 하나당.. XXXBinding 클래스 자동 만들어진다..
+    //build.gradle.kts 를 수정했으면.. 꼭.. 우측 상단의 Sync Now 클릭해야 반영된다..
+    viewBinding.isEnabled = true
 }
 
 dependencies {
