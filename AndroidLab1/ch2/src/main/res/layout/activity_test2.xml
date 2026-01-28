@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test2Activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가나다라 http://www.google.com 마바사 a@a.com 아자카차 02-1110-1111"
+        android:autoLink="web|email|phone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/long_txt"
+        android:layout_marginTop="16dp"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+<!--
+layout_width : 뷰의 사이즈..
+maxWidth : 뷰에 찍히는 이미지의 사이즈..
+adjustViewBounds : 종횡비 유지..
+-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lake_1"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="전화번호를 입력해 주세요"
+        android:layout_marginTop="16dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check.."
+        android:layout_marginTop="16dp"/>
+
+<!--    RadioButton 은 RadioGroup 으로 묶어서..-->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="radio1"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="radio2"/>
+    </RadioGroup>
+
+</LinearLayout>
