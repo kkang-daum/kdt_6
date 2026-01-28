@@ -25,11 +25,11 @@ class Test1_1Activity : AppCompatActivity() {
 //            text = "Lake Louise"
 //        }
 //        //이미지 출력 뷰
-//        val image = ImageView(this).also {
-//            //객체를 람다함수에 매개변수로.. ==> it
-//            //리소스 이미지를 획득해서.. ImageView 에 지정..
-//            it.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.lake_1))
-//        }
+        val image = ImageView(this).also {
+            //객체를 람다함수에 매개변수로.. ==> it
+            //리소스 이미지를 획득해서.. ImageView 에 지정..
+            it.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.lake_1))
+        }
 //        val address = TextView(this).apply {
 //            typeface = Typeface.DEFAULT_BOLD
 //            text = "Lake Louise, AB, 캐나다"
