@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<!--
-앱의 리소스..
-모든 리소스는 res 폴더에 위치해야 한다..
-res 하위 리소스는 규칙이 있다.
-- drawable - 이미지
-- layout - UI XML
-- mipmap - App 실행 아이콘..
-- values - 값으로 이용되는 리소스(문자열 값)
-
-리소스를 어떤 XML에서 지정해서 사용하고 싶다면..
-==> @drawable/a ==>res/drawable/a.png
-코드에서(kotlin) 리소스를 지정해서 사용하겠다면..
-==> R.drawable.a
--->
 
     <application
         android:allowBackup="true"
@@ -25,24 +11,25 @@ res 하위 리소스는 규칙이 있다.
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab1">
-<!--
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <!--
 component, 개발자가 만드는 클래스 => 런타임 시점에 시스템에 의해 라이프사이클 관리
 런타임시점에 안드로이드 시스템은 AndroidManifest 만 보고 움직인다..
 ==>컴포턴트 클래스를 만들었다면 시스템에 등록해야한다. AndroidManifest.xml 에 등록해야 한다..
--->
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
-<!--
-    생략 가능한데.. 아래처럼 등록되었다면.. 이 액티비티가 유저 아이콘 클릭시에 실행되는 액티비티라는 등록이다.
--->
+
+            <!--     생략 가능한데.. 아래처럼 등록되었다면.. 이 액티비티가 유저 아이콘 클릭시에 실행되는 액티비티라는 등록이다. -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
