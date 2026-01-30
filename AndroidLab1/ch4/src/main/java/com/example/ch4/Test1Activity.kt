@@ -53,16 +53,32 @@ class Test1Activity : AppCompatActivity(), CompoundButton.OnCheckedChangeListene
         }
 
         binding.button1.setOnClickListener(EventHandler())
-        binding.button2.setOnClickListener(EventHandler())
+//        binding.button2.setOnClickListener(EventHandler())
+        binding.button2.setOnClickListener {
+            showToast("button2 click..")
+        }
 
         binding.check1.setOnCheckedChangeListener(this)
 
         //이벤트 핸들러가 준비되어야 한다.. 이 이벤트에서만 사용하는 핸들러다.. ==> 익명 클래스..
         //인터페이스 구현해야한다..
-        binding.check2.setOnCheckedChangeListener(object: CompoundButton.OnCheckedChangeListener {
-            override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
-                Log.d("kkang", "check2 is $isChecked")
-            }
-        })
+//        binding.check2.setOnCheckedChangeListener(object: CompoundButton.OnCheckedChangeListener {
+//            override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
+//                Log.d("kkang", "check2 is $isChecked")
+//            }
+//        })
+
+        //인터페이스를 구현한 익명 클래스를 만든다면.. 위처럼 object: Interface { 추상함수 } 형태가 기본이지만..
+        //줄여서 추상함수 안쪽 내용만 { } 로 작성이 가능하다..
+        //Single Abstract Method 기법이라고 부른다. SAM 기법..
+        //추상함수 하나만 가지는 인퍼페이스만 가능하다..
+//        binding.check2.setOnCheckedChangeListener({buttonView, isChecked ->
+//            Log.d("kkang", "check2 is $isChecked")
+//        })
+        
+        //hof.. 마지막 매개변수 람다함수.. () 밖에..
+        binding.check2.setOnCheckedChangeListener {buttonView, isChecked ->
+            Log.d("kkang", "check2 is $isChecked")
+        }
     }
 }
