@@ -58,6 +58,7 @@ class Test1Activity : AppCompatActivity(), CompoundButton.OnCheckedChangeListene
             showToast("button2 click..")
         }
 
+
         binding.check1.setOnCheckedChangeListener(this)
 
         //이벤트 핸들러가 준비되어야 한다.. 이 이벤트에서만 사용하는 핸들러다.. ==> 익명 클래스..
@@ -75,7 +76,7 @@ class Test1Activity : AppCompatActivity(), CompoundButton.OnCheckedChangeListene
 //        binding.check2.setOnCheckedChangeListener({buttonView, isChecked ->
 //            Log.d("kkang", "check2 is $isChecked")
 //        })
-        
+
         //hof.. 마지막 매개변수 람다함수.. () 밖에..
         binding.check2.setOnCheckedChangeListener {buttonView, isChecked ->
             Log.d("kkang", "check2 is $isChecked")
