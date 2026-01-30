@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--여러 색상이 한꺼번에 어떤 뷰에 적용될때.. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#FFFF0000" android:state_pressed="true"/>
+    <item android:color="#FF0000FF" android:state_focused="true"/>
+    <item android:color="#FF000000"/>
+</selector>
